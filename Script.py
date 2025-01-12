@@ -2,17 +2,17 @@
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
-
 class script(object):
-   START_TXT = """<b>ʜɪ {} 🤩, ᴍʏ ɴᴀᴍᴇ ɪs <a href=https://t.me/{}>{}</a>
+    START_TXT = """<b>ʜɪ {} 🤩, ᴍʏ ɴᴀᴍᴇ ɪs <a href=https://t.me/{}>{}</a>
    
 🚀 ᴛʜᴇ ᴜʟᴛɪᴍᴀᴛᴇ ғɪʟᴇ sᴛʀᴇᴀᴍ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴇᴍɪᴜᴍ ᴜɪ & ᴘʟᴀʏᴇʀ sᴜᴘᴘᴏʀᴛ!  
 
 sᴇɴᴅ ᴍᴇ ᴀ ᴍᴇᴅɪᴀ & ᴡɪᴛɴᴇss ᴍᴀɢɪᴄ ✨!</b>"""
-LOG_TEXT_P = """#NewUser
+
+    LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Nᴀᴍᴇ - {}"""
-    
+
     RESTART_TXT = """
 <b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
 
