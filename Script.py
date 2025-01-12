@@ -9,8 +9,7 @@ class script(object):
 🚀 ᴛʜᴇ ᴜʟᴛɪᴍᴀᴛᴇ ғɪʟᴇ sᴛʀᴇᴀᴍ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴇᴍɪᴜᴍ ᴜɪ & ᴘʟᴀʏᴇʀ sᴜᴘᴘᴏʀᴛ!  
 
 sᴇɴᴅ ᴍᴇ ᴀ ᴍᴇᴅɪᴀ & ᴡɪᴛɴᴇss ᴍᴀɢɪᴄ ✨!</b>"""
-
-    LOG_TEXT_P = """#NewUser
+LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Nᴀᴍᴇ - {}"""
     
