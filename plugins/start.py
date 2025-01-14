@@ -28,11 +28,6 @@ async def is_subscribed(bot, user_id, channels):
 async def start(client, message):
     user_id = message.from_user.id
 
-    # Check if user is banned
-    if await db.is_user_banned(user_id):
-        await message.reply_text("🚫 You are banned from using this bot.")
-        return
-
     # Force subscription logic
     if AUTH_CHANNEL:
         try:
@@ -65,10 +60,10 @@ async def start(client, message):
 async def stream_start(client, message):
     file = getattr(message, message.media.value)
     filename = file.file_name
-    filesize = humanize.naturalsize(file.file_size)
+    filesize = humanize.naturalsize(file.file_size) 
     fileid = file.file_id
     user_id = message.from_user.id
-    username = message.from_user.mention
+    username = message.from_user.mention 
 
     log_msg = await client.send_cached_media(
         chat_id=LOG_CHANNEL,
@@ -81,11 +76,7 @@ async def stream_start(client, message):
     else:
         stream = await get_shortlink(f"{URL}watch/{log_msg.id}/{file_name_quoted}?hash={get_hash(log_msg)}")
         download = await get_shortlink(f"{URL}{log_msg.id}/{file_name_quoted}?hash={get_hash(log_msg)}")
-
-    # Debugging the links and response
-    print(f"Stream URL: {stream}")
-    print(f"Download URL: {download}")
-
+        
     msg_text = f"""
 <i><u>Your Link is Ready!</u></i>\n
 <b>📂 File Name:</b> <i>{get_name(log_msg)}</i>\n
@@ -95,7 +86,6 @@ async def stream_start(client, message):
 <b>⚠️ Note:</b> Links won't expire until I delete them.
 """
 
-    # Ensure the message has proper buttons for download/stream
     await message.reply_text(
         text=msg_text,
         reply_markup=InlineKeyboardMarkup([
@@ -103,4 +93,4 @@ async def stream_start(client, message):
         ]),
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True
-            )
+    )
