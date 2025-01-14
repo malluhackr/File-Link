@@ -4,7 +4,7 @@ from Script import script
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
-from info import AUTH_CHANNEL, LOG_CHANNEL, START_IMAGE_URL, URL, SHORTLINK
+from info import AUTH_CHANNEL, LOG_CHANNEL, SHORTLINK, SHORTLINK_URL
 from urllib.parse import quote_plus
 from TechVJ.util.file_properties import get_name, get_hash, get_media_file_size
 from TechVJ.util.human_readable import humanbytes
