@@ -13,7 +13,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 PORT = environ.get("PORT", "8080")
 
 # Image URL for the start command
-START_IMAGE_URL = environ.get("START_IMAGE_URL", "https://example.com/start-image.jpg")
+START_IMAGE_URL = environ.get("START_IMAGE_URL", "https://envs.sh/vp4.jpg")
 
 # Admins, Channels & Users
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002441553603'))
