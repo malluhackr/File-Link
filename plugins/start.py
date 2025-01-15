@@ -29,7 +29,7 @@ async def start(client, message):
     user_id = message.from_user.id
 
     # React with multiple emojis
-    for emoji in ["🤩", "😶", "❤️‍🔥", "💖"]:
+    for emoji in "❤️‍🩹":
         await message.react(emoji)
 
     # Force subscription logic
