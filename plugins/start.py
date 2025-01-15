@@ -28,6 +28,10 @@ async def is_subscribed(bot, user_id, channels):
 async def start(client, message):
     user_id = message.from_user.id
 
+    # React with multiple emojis
+    for emoji in ["🤩", "😶", "❤️‍🔥", "💖"]:
+        await message.react(emoji)
+
     # Force subscription logic
     if AUTH_CHANNEL:
         try:
@@ -35,7 +39,7 @@ async def start(client, message):
             if subscription_buttons:
                 subscription_buttons.append([InlineKeyboardButton("♻️ Try Again ♻️", url=f"https://t.me/{(await client.get_me()).username}?start=true")])
                 await message.reply_text(
-                    text=f"👋 Hello {message.from_user.mention},\n\nPlease join the required channel(s) to use this bot. Click 'Try Again' after joining.",
+                    text=f"👋ʜɪ {message.from_user.mention},\n\nPlease join the required channel(s) to use this bot. Click 'Try Again' after joining.",
                     reply_markup=InlineKeyboardMarkup(subscription_buttons)
                 )
                 return
@@ -51,7 +55,7 @@ async def start(client, message):
     await message.reply_text(
         text=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Update Channel", url="https://t.me/KeralaCaptain")]]
+            [[InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/KeralaCaptain")]]
         ),
         parse_mode=enums.ParseMode.HTML
     )
