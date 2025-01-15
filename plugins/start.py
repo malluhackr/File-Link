@@ -77,6 +77,16 @@ async def stream_start(client, message):
         stream = await get_shortlink(f"{URL}watch/{log_msg.id}/{file_name_quoted}?hash={get_hash(log_msg)}")
         download = await get_shortlink(f"{URL}{log_msg.id}/{file_name_quoted}?hash={get_hash(log_msg)}")
         
+    await log_msg.reply_text(
+        text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {file_name_quoted}",
+        quote=True,
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton("🚀 Fast Download 🚀", url=download), 
+             InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]
+        ])
+    )
+
     msg_text = f"""
 <i><u>Your Link is Ready!</u></i>\n
 <b>📂 File Name:</b> <i>{get_name(log_msg)}</i>\n
